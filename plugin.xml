@@ -30,7 +30,7 @@
         </feature>
       </config-file>
 
-      <source-file src="src/com/autovitalsinc/VideoTrimmer.java" target-dir="src/com/autovitalsinc/" />
+      <source-file src="src/com/autovitalsinc/videotrimmer/VideoTrimmer.java" target-dir="src/com/autovitalsinc/videotrimmer/" />
     </platform>
 
 </plugin>
