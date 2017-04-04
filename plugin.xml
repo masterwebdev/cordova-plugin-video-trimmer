@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.autoitalsinc.videotrimmer"
+        version="0.01">
+
+  <name>AV Video Trimmer</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/videotrimmer.js" target="js/videotrimmer.js"/>
+
+  <js-module src="www/videotrimmer.js" name="videotrimmer">
+    <clobbers target="videotrimmer" />
+  </js-module>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/videotrimmer.js" name="videotrimmer">
+        <runs/>
+
+        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
+        <clobbers target="VideoTrimmer" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="VideoTrimmer">
+          <param name="android-package" value="com.autoitalsinc.videotrimmer" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/autovitalsinc/VideoTrimmer.java" target-dir="src/com/autovitalsinc/" />
+    </platform>
+
+</plugin>
